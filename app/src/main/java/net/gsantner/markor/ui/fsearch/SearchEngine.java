@@ -3,6 +3,7 @@ package net.gsantner.markor.ui.fsearch;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.design.widget.Snackbar;
 import android.support.v4.util.Pair;
 import android.view.View;
@@ -11,12 +12,17 @@ import android.widget.Toast;
 import net.gsantner.markor.R;
 import net.gsantner.markor.format.TextFormat;
 import net.gsantner.opoc.util.Callback;
+import net.gsantner.opoc.util.FileUtils;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,6 +32,8 @@ import java.util.Queue;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import other.de.stanetz.jpencconverter.JavaPasswordbasedCryption;
 
 @SuppressWarnings("WeakerAccess")
 
@@ -60,6 +68,7 @@ public class SearchEngine {
         public List<String> ignoredDirectories;
         public boolean isShowMatchPreview = true;
         public boolean isShowResultOnCancel = true;
+        public char[] password = new char[0];
     }
 
     public static class FitFile {
@@ -393,7 +402,7 @@ public class SearchEngine {
                 return ret;
             }
 
-            try (final BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)))) {
+            try (final BufferedReader br = new BufferedReader(new InputStreamReader(getInputStream(file)))) {
                 int lineNumber = 0;
                 for (String line; (line = br.readLine()) != null; ) {
                     if (isCancelled() || _isCanceled) {
@@ -429,5 +438,19 @@ public class SearchEngine {
             }
             return false;
         }
+
+        private InputStream getInputStream(File file) throws FileNotFoundException {
+            if (isEncryptedFile(file)) {
+                final byte[] encryptedContext = FileUtils.readCloseStreamWithSize(new FileInputStream(file), (int) file.length());
+                return new ByteArrayInputStream(JavaPasswordbasedCryption.getDecryptedText(encryptedContext, _config.password.clone()).getBytes(StandardCharsets.UTF_8));
+            } else {
+                return new FileInputStream(file);
+            }
+        }
+    }
+
+
+    private static boolean isEncryptedFile(File file) {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && file.getName().endsWith(JavaPasswordbasedCryption.DEFAULT_ENCRYPTION_EXTENSION);
     }
 }

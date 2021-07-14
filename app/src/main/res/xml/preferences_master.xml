@@ -140,6 +140,12 @@
                 android:icon="@drawable/ic_screen_lock_portrait_black_24dp"
                 android:key="@string/pref_key__is_keep_screen_on"
                 android:title="@string/keep_screen_on" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:icon="@drawable/ic_open_in_browser_black_24dp"
+                android:key="@string/pref_key__open_links_in_default_browser"
+                android:title="@string/open_links_in_default_browser" />
         </PreferenceCategory>
 
         <PreferenceCategory android:title="@string/main_view">

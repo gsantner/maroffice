@@ -907,4 +907,8 @@ public class AppSettings extends SharedPreferencesPropertyBackend {
     public int getDueDateOffset() {
         return getInt(R.string.pref_key__todotxt__due_date_offset, 3);
     }
+
+    public boolean isOpenLinksInDefaultBrowser() {
+        return getBool(R.string.pref_key__open_links_in_default_browser, false);
+    }
 }

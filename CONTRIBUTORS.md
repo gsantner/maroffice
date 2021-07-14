@@ -47,3 +47,4 @@ Where:
 * **[Patricia Heimfarth](https://github.com/PatriciaHeimfarth)**<br>~° Added checkbox for todo completion date
 * **[Peter Schwede](https://github.com/pschwede)**<br>~° Added Zim-Wiki support.
 * **[Frederic Jacob](https://github.com/fredericjacob)**<br>~° Added Zim-Wiki highlighting, text actions, view mode, page creation.
+* **[Cam Graff](https://github.com/camgraff)**<br>~° Added option for opening links in default browser.

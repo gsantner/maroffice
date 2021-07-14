@@ -134,6 +134,7 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="create_note" needed="false">Create Note</string>
     <string name="special_documents" needed="false">Special documents</string>
     <string name="keep_screen_on" needed="false">Keep screen on</string>
+    <string name="open_links_in_default_browser" needed="false">Open links in default browser</string>
     <string name="back_to_previous_folder" needed="false">Back to previous folder</string>
     <string name="app_settings" needed="false">App Settings</string>
     <string name="editor_settings" needed="false">Editor Settings</string>

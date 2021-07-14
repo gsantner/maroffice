@@ -66,6 +66,11 @@ public class MarkorWebViewClient extends WebViewClient {
                 }
             } else {
                 ContextUtils cu = new ContextUtils(_activity.getApplicationContext());
+                AppSettings settings = new AppSettings(_activity.getApplicationContext());
+                if (settings.isOpenLinksInDefaultBrowser()) {
+                    cu.openWebpageInExternalBrowser(url);
+                    return true;
+                }
                 ShareUtil su = new ShareUtil(view.getContext());
                 try {
                     // Use a CustomTabsIntent.Builder to configure CustomTabsIntent.

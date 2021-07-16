@@ -1,5 +1,8 @@
 ### Recent changes
 
+### v2.8 [Blog Post](https://gsantner.net/blog/2021/07/30/markor-v2.8-asdfasdf.html?source=changelog)
+- 
+
 ### v2.7 [Blog Post](https://gsantner.net/blog/2021/06/26/markor-v2.7-search-in-content-backup-restore.html?source=changelog)
 - Recursive file search with in-content search, #1337 by @adelobosko @harshad1 @gsantner
 - Backup and restore settings, Format selection with radio buttons, #1244 by @harshad1 @gsantner

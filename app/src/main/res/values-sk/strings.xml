@@ -11,6 +11,27 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="settings">Nastavenie</string>
+    <string name="light">Svetlá</string>
+    <string name="dark">Tmavá</string>
+    <string name="delete">Odstrániť</string>
+    <string name="appearance">Vzhľad</string>
+    <string name="rename">Premenovať</string>
+    <string name="confirm_delete">Potvrdiť odstránenie</string>
+    <string name="do_you_really_want_to_delete_this_witharg">Naozaj chcete odstrániť %s?</string>
+    <string name="confirm_overwrite">Potvrdiť prepísanie</string>
+    <string name="file_already_exists_overwerite">Súbor už existuje. Prepísať?</string>
+    <string name="browse_filesystem">Prechádzať súborový systém</string>
+    <string name="title">Názov</string>
+    <string name="empty_directory">Prázdny adresár</string>
+    <string name="enter_name_of_folder">Zadajte názov vášho priečinku</string>
+    <string name="create_folder">Vytvoriť priečinok</string>
+    <string name="create_new_document">Vytvoriť nový dokument</string>
+    <string name="move">Presunúť</string>
+    <string name="copy">Kopírovať</string>
+    <string name="info">Informácie</string>
+    <string name="file_folder_already_exists_please_use_a_different_name">Súbor/priečinok už existuje. Prosím, použite iný názov</string>
+    <string name="import_from_device">Importovať zo zariadenia</string>
+    <string name="import_">Importovať</string>
     <string name="about">O aplikacii</string>
     <string name="add_task">Pridaj ulohu</string>
     <string name="add_x_witharg">Pridaj %s</string>

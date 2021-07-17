@@ -261,7 +261,7 @@ public class SearchOrCustomTextDialogCreator {
         baseConf(activity, dopt);
         dopt.data = new ArrayList<>(new TreeSet<>(availableData));
         dopt.callback = callback;
-        dopt.titleText = isTodoTxtAlternativeNaming(activity) ? R.string.category : R.string.context;
+        dopt.titleText = isTodoTxtAlternativeNaming(activity) ? R.string.insert_category : R.string.insert_context;
         dopt.isMultiSelectEnabled = true;
         dopt.positionCallback = (result) -> {
             for (final Integer i : result) {
@@ -277,9 +277,9 @@ public class SearchOrCustomTextDialogCreator {
         final TodoTxtTask[] allTasks = TodoTxtTask.getAllTasks(fullText);
         dopt.data = Arrays.asList(isProjects ? TodoTxtTask.getProjects(allTasks) : TodoTxtTask.getContexts(allTasks));
         if (isTodoTxtAlternativeNaming(activity)) {
-            dopt.titleText = isProjects ? R.string.tag : R.string.category;
+            dopt.titleText = isProjects ? R.string.search_tag : R.string.search_category;
         } else {
-            dopt.titleText = isProjects ? R.string.project : R.string.context;
+            dopt.titleText = isProjects ? R.string.search_project : R.string.search_context;
         }
         dopt.searchHintText = R.string.search_or_custom;
 
@@ -359,7 +359,7 @@ public class SearchOrCustomTextDialogCreator {
         baseConf(activity, dopt);
         dopt.data = new ArrayList<>(new TreeSet<>(availableData));
         dopt.callback = callback;
-        dopt.titleText = isTodoTxtAlternativeNaming(activity) ? R.string.tag : R.string.project;
+        dopt.titleText = isTodoTxtAlternativeNaming(activity) ? R.string.insert_tag : R.string.insert_project;
         dopt.searchHintText = R.string.search_or_custom;
         dopt.isMultiSelectEnabled = true;
         dopt.positionCallback = (result) -> {

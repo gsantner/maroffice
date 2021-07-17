@@ -191,7 +191,7 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="unordered_list_character">Caracter de lista não ordenado</string>
     <string name="character_to_start_items_of_unordered_list_with">Qual personagem usar para denotar listas não ordenadas</string>
     <string name="unordered_list_char_dash">Traço (-)</string>
-    <string name="unordered_list_char_asterisk">Asterisk (*)</string>
+    <string name="unordered_list_char_asterisk">Asterisco (*)</string>
     <string name="unordered_list_char_plus">Mais (+)</string>
     <string name="filemanager_doesnot_supply_required_data__appspecific">Markor só pode editar documentos locais e off-line, não há suporte para gerenciadores de arquivos que não disponibilizem o caminho completo do arquivo.</string>
     <string name="sync_to_local_folder_notice">Importante: se você estiver usando um aplicativo de sincronização on-line e souber o local do diretório onde ele armazena informações, poderá alterar o diretório de documentos padrão para sincronizar ou usar um gerenciador de arquivos para abrir o documentos que deseja editar.</string>

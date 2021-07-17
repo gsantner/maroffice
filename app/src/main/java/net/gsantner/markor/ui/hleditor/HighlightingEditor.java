@@ -11,6 +11,8 @@ package net.gsantner.markor.ui.hleditor;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Rect;
 import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.RequiresApi;
@@ -341,5 +343,15 @@ public class HighlightingEditor extends AppCompatEditText {
 
     public boolean getAccessibilityEnabled() {
         return _accessibilityEnabled;
+    }
+
+    public boolean isVisible() {
+        if (!isShown()) {
+            return false;
+        }
+        final Rect actualPosition = new Rect();
+        getGlobalVisibleRect(actualPosition);
+        final Rect screen = new Rect(0, 0, Resources.getSystem().getDisplayMetrics().widthPixels, Resources.getSystem().getDisplayMetrics().heightPixels);
+        return actualPosition.intersect(screen);
     }
 }

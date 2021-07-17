@@ -11,6 +11,11 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="settings">Nastavenie</string>
+    <string name="light">Svetlá</string>
+    <string name="dark">Tmavá</string>
+    <string name="delete">Odstrániť</string>
+    <string name="appearance">Vzhľad</string>
+    <string name="rename">Premenovať</string>
     <string name="about">O aplikacii</string>
     <string name="add_task">Pridaj ulohu</string>
     <string name="add_x_witharg">Pridaj %s</string>
